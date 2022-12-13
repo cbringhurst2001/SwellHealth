@@ -5,12 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/swell_green"
+    android:background="@color/lightgrey"
     tools:context=".RecipeDetailsActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/swell_green">
         <TextView
             android:id="@+id/textView_meal_name"
             android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/dubai_regular"
                 android:gravity="center"
+                android:layout_marginTop="4dp"
                 android:text="Source"
                 android:textColor="@color/black"
                 android:textSize="14sp"
@@ -89,7 +91,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:padding="8dp"
-                android:text="Show Nutrition Info" />
+                android:text="Show Nutrition Info"
+                android:textColor="@color/black" />
 
             <TextView
                 android:layout_width="match_parent"

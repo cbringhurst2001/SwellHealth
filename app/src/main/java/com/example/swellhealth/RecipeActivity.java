@@ -21,7 +21,7 @@ public class RecipeActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     SearchView searchView;
     List<String> tags = new ArrayList<>();
-    ImageButton mex, ind, ital, japan, euro, carib;
+    ImageButton mex, ind, ital, china, euro, cajun;
     String query;
 
     //Create the launch page of the app
@@ -34,9 +34,9 @@ public class RecipeActivity extends AppCompatActivity {
         mex = (ImageButton) findViewById(R.id.mexicanButton);
         ind = (ImageButton) findViewById(R.id.indianButton);
         ital = (ImageButton) findViewById(R.id.italianButton);
-        japan = (ImageButton) findViewById(R.id.japaneseButton);
+        china = (ImageButton) findViewById(R.id.chineseButton);
         euro = (ImageButton) findViewById(R.id.europeanButton);
-        carib = (ImageButton) findViewById(R.id.caribbeanButton);
+        cajun = (ImageButton) findViewById(R.id.cajunButton);
 
 
 
@@ -81,10 +81,10 @@ public class RecipeActivity extends AppCompatActivity {
                 openShowRecipes();
             }
         });
-        japan.setOnClickListener(new View.OnClickListener() {
+        china.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                query = "japanese";
+                query = "chinese";
                 openShowRecipes();
             }
         });
@@ -95,7 +95,7 @@ public class RecipeActivity extends AppCompatActivity {
                 openShowRecipes();
             }
         });
-        carib.setOnClickListener(new View.OnClickListener() {
+        cajun.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 query = "caribbean";
