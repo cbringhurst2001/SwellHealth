@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SwellHealth</string>
+    <string name="api_key">08ddf3a07e8b467d8186f3a4905d321a</string>
+    <string-array name="tags">
+        <item></item>
+    </string-array>
+</resources>

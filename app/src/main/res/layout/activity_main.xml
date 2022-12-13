@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:src="@drawable/swellhealth">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/recipeActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:text="Recipes"
+        android:backgroundTint="@color/swell_green">
+    </Button>
+
+    <Button
+        android:id="@+id/calendarActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:backgroundTint="@color/swell_green"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Calendar">
+
+    </Button>
+
+    <Button
+        android:id="@+id/profileActivityButton"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="10dp"
+        android:text="Profile"
+        android:backgroundTint="@color/swell_green">
+    </Button>
+
+</LinearLayout>

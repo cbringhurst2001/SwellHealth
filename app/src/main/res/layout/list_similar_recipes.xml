@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="175dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:elevation="8dp"
+    android:layout_margin="8dp"
+    android:id="@+id/similar_recipe_holder">
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:id="@+id/textView_similar_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:ellipsize="end"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:maxLines="2"
+            android:text="Similar Name"
+            android:textSize="16dp"
+            android:padding="4dp"
+            android:fontFamily="@font/literalreg"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+        <ImageView
+            android:id="@+id/imageView_similar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/textView_similar_servings"
+            android:fontFamily="@font/royce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Similar Servings"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

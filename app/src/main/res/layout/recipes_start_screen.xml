@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:contex=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/swell_green">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/royce"
+            android:padding="4dp"
+            android:text="Swell Health Nutrition"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/lightgrey"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView_start"
+            app:queryHint="Search Recipes"
+            app:iconifiedByDefault="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingTop="12dp">
+
+        <ImageButton
+            android:id="@+id/mexicanButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:background="@drawable/rounded_corner"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/mex_button" />
+
+        <ImageButton
+            android:id="@+id/indianButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/ind_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Mexican"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Indian"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/italianButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/ital_button" />
+
+        <ImageButton
+            android:id="@+id/japaneseButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/japan_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Italian"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Japanese"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/caribbeanButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:src="@drawable/carib_button" />
+
+        <ImageButton
+            android:id="@+id/europeanButton"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/euro_button" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="Caribbean"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="European"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:fontFamily="@font/literalreg"
+            android:letterSpacing="0.1"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+
+</LinearLayout>
