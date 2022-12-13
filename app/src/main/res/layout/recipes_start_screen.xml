@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingTop="12dp">
+        android:paddingTop="8dp">
 
         <ImageButton
             android:id="@+id/mexicanButton"
