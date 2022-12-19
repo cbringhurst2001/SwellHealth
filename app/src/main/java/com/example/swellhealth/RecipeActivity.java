@@ -59,7 +59,7 @@ public class RecipeActivity extends AppCompatActivity {
             }
         });
 
-
+        //Assign all the cuisine buttons to search for their respective query
         mex.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,7 +107,7 @@ public class RecipeActivity extends AppCompatActivity {
     }
 
 
-
+    //When the user presses a button, start the show recipes activity with their given tag
     public void openShowRecipes(){
         startActivity(new Intent(RecipeActivity.this, ShowRecipesActivity.class)
                 .putExtra("query", query));

@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 
+import java.util.Calendar;
+
+//Create a menu layout to navigate through the app
 public class MainActivity extends AppCompatActivity {
 
     Button recipeButton, calendarButton, profileButton;
@@ -18,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Initialize buttons
         recipeButton = (Button) findViewById(R.id.recipeActivityButton);
         calendarButton = (Button) findViewById(R.id.calendarActivityButton);
-        profileButton = (Button) findViewById(R.id.profileActivityButton);
 
+
+        //Set each button to its desired activity
         recipeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -29,12 +34,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        profileButton.setOnClickListener(new View.OnClickListener() {
+        calendarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+                startActivity(new Intent(MainActivity.this, CalendarActivity.class));
             }
         });
 
+
     }
+
+
 }

@@ -116,8 +116,11 @@ public class RequestManager {
         });
     }
 
+    //Create a get recipe instructions method with the spoonacular API
     public void getRecipeInstructions(InstructionsListener listener, int id){
+        //use retrofit and callRecipeInstructions interface to call to the web API
         CallInstructions callInstructions = retrofit.create(CallInstructions.class);
+        //Request a call using the current recipe ID and the API key
         Call<List<InstructionsResponse>> call = callInstructions.callInstructions(id, context.getString(R.string.api_key));
         call.enqueue(new Callback<List<InstructionsResponse>>() {
             @Override

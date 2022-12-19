@@ -12,20 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/swell_green">
+
         <TextView
             android:id="@+id/textView_meal_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_gravity="center"
-            android:fontFamily="@font/literalreg"
-            android:paddingRight="8dp"
             android:layout_margin="8dp"
+            android:fontFamily="@font/literalreg"
+            android:gravity="center"
+            android:paddingRight="8dp"
             android:text="Recipe Name"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

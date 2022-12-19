@@ -45,6 +45,10 @@ public class IngredientsAdapter extends RecyclerView.Adapter<IngredientsViewHold
     public int getItemCount() {
         return list.size();
     }
+
+    public List<ExtendedIngredient> getIngredients() {
+        return list;
+    }
 }
 //Create a class to list recipe ingredients with textViews
 class IngredientsViewHolder extends RecyclerView.ViewHolder {

@@ -1,10 +1,15 @@
 package com.example.swellhealth;
 
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,17 +25,22 @@ import com.example.swellhealth.Listeners.InstructionsListener;
 import com.example.swellhealth.Listeners.RecipeClickListener;
 import com.example.swellhealth.Listeners.RecipeDetailsListener;
 import com.example.swellhealth.Listeners.SimilarRecipesListener;
+import com.example.swellhealth.Models.ExtendedIngredient;
 import com.example.swellhealth.Models.InstructionsResponse;
 import com.example.swellhealth.Models.RecipeDetailsResponse;
 import com.example.swellhealth.Models.SimilarRecipeResponse;
 import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class RecipeDetailsActivity extends AppCompatActivity {
 
     int id;
-    TextView textView_meal_name, textView_meal_source, textView_meal_summary;
+    TextView textView_meal_name, textView_meal_source, textView_meal_summary, calendarRecipeName;
     ImageView imageView_meal_image, imageView_nutrition_label;
     RecyclerView recycler_meal_ingredients, recycler_meal_similar, recycler_meal_instructions;
     RequestManager manager;
@@ -39,6 +49,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
     SimilarRecipeAdapter similarRecipeAdapter;
     InstructionsAdapter instructionsAdapter;
     Button nutritionButton;
+    Calendar calendar = Calendar.getInstance(Locale.ENGLISH);
 
 
     @Override
@@ -61,8 +72,19 @@ public class RecipeDetailsActivity extends AppCompatActivity {
         dialog = new ProgressDialog(this);
         dialog.setTitle("Loading Details...");
         dialog.show();
-
-
+        nutritionButton = (Button) findViewById(R.id.nutrition_button);
+        nutritionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                List<ExtendedIngredient> ingredients = ingredientsAdapter.getIngredients();
+                openRecipeNutritionActivity(ingredients);
+            }
+        });
+    }
+    public void openRecipeNutritionActivity (List<ExtendedIngredient> ingredients) {
+        Intent intent = new Intent(this, RecipeNutritionActivity.class);
+        RecipeNutritionActivity.ingredients = ingredients;
+        startActivity(intent);
     }
 
 
@@ -103,6 +125,7 @@ public class RecipeDetailsActivity extends AppCompatActivity {
             Toast.makeText(RecipeDetailsActivity.this, message, Toast.LENGTH_SHORT).show();
         }
     };
+
 
 
     //Call the similar recipes listener
